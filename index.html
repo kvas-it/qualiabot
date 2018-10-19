@@ -12,8 +12,8 @@ body {
 }
 
 input[type="color"] {
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
 
 label {
@@ -22,6 +22,16 @@ label {
 
 #talk, #mental-state, #epi-container, #assoc-container {
   visibility: hidden;
+}
+
+#epi-container, #assoc-container {
+  padding-right: 30px;
+  float: left;
+}
+
+#episodic, #associative {
+  max-height: 600px;
+  overflow: auto;
 }
 
 #interface {
@@ -38,7 +48,7 @@ label {
   <body>
     <a href="https://github.com/kvas-it/qualiabot/" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
-    <h1>QualiaBot</h1>
+    <h1>I can haz qualia!</h1>
 
     <div id="interface">
       <form>

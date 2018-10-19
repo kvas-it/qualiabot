@@ -2,7 +2,6 @@ var view = {};
 var model = {
   episodic: [],
   associative: {},
-  expect: null,
   color: null,
   quale: null,
 };
@@ -145,7 +144,7 @@ function assocGet(m) {
     // Color, look for similar colors.
     const keys = Object.keys(model.associative);
     for (var i = 0; i < keys.length; i++) {
-      if (keys[i][0] == '#' && colorDistance(m, keys[i]) < 100) {
+      if (keys[i][0] == '#' && colorDistance(m, keys[i]) < 60) {
         return model.associative[keys[i]];
       }
     }
