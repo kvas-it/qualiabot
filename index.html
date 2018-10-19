@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <title>QualiaBot</title>
+    <script type="text/javascript" src="qualiabot.js"></script>
+    <style type="text/css">
+body {
+  background-color: white;
+  font-family: Helvetica, Arial;
+  margin: 50px;
+}
+
+input[type="color"] {
+  width: 200px;
+  height: 150px;
+}
+
+label {
+  color: grey;
+}
+
+#talk, #mental-state, #epi-container, #assoc-container {
+  visibility: hidden;
+}
+
+#interface {
+  float: left;
+}
+
+#mental-state {
+  padding: 10px 20px;
+  border: 1px solid grey;
+  float: right;
+}
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/kvas-it/qualiabot/" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+    <h1>QualiaBot</h1>
+
+    <div id="interface">
+      <form>
+        <label>Click below to pick a color</label><br/>
+        <input id="color-picker" type="color" />
+        <div id="talk">
+          <p id="bot-say"></p>
+          <input type="text" id="human-say" />
+          <button id="human-say-button">Say</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="mental-state">
+      <div id="epi-container">
+        <h2>Episodic memory</h2>
+        <div id="episodic"></div>
+      </div>
+      <div id="assoc-container">
+        <h2>Associative memory</h2>
+        <div id="associative"></div>
+      </div>
+    </div>
+  </body>
+</html>
