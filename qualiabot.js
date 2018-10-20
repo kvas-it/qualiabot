@@ -115,8 +115,9 @@ function say(text) {
   show(view.talk);
   rememberEpisodic('I said: ' + text);
   view.botSay.innerHTML = text;
-  view.humanSay.value = '';
-  view.humanSay.focus();
+  if (text.endsWith('?')) {
+    view.humanSay.focus();
+  }
 }
 
 function hexToRgb(hex) {
